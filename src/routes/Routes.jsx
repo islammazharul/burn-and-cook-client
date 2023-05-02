@@ -7,6 +7,7 @@ import Main from "../layout/Main";
 import ChefLayout from "../layout/ChefLayout";
 import Category from "../pages/Home/Category/Category";
 import PrivateRoute from "./PrivateRoute";
+import Blog from "../pages/Shared/Blog/Blog";
 
 
 const router = createBrowserRouter([
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Navigate to="/category/0"></Navigate>
+                element: <Navigate to="/category"></Navigate>
             },
             {
                 path: 'login',
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: 'terms',
                 element: <Terms></Terms>
+            },
+            {
+                path: 'blog',
+                element: <Blog></Blog>
             },
             {
                 path: 'category',

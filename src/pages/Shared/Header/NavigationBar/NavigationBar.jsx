@@ -19,10 +19,10 @@ const NavigationBar = () => {
                 <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="mx-auto">
-                            <Link to='/category/0'>Home</Link>
-                            <Nav.Link href="#pricing">About</Nav.Link>
-                            <Nav.Link href="#pricing">Career</Nav.Link>
+                        <Nav><h2>Burn&Cook</h2></Nav>
+                        <Nav className="mx-auto gap-4">
+                            <Link to='/category'>Home</Link>
+                            <Link to='/blog'>Blog</Link>
                         </Nav>
                         <Nav>
                             {user && <FaUserCircle style={{ fontSize: "40px" }}></FaUserCircle>}

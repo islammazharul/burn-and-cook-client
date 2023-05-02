@@ -3,8 +3,8 @@ import React from 'react';
 const Blog = () => {
     return (
         <div>
-            <div className='w-full mb-5'>
-                <div className='w-11/12 sm: mx-auto'>
+            <div className='w-100 mb-5'>
+                <div className='w-50 sm: mx-auto'>
                     <h3 className='text-3xl text-purple-700 text-center font-bold'>-Educational Info-</h3>
                     <div className='bg-purple-100 mt-6 p-5 rounded'>
                         <h4 className='text-2xl text-purple-700 font-bold'>a. When should you use context API?</h4>

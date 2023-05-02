@@ -7,7 +7,7 @@ import NavigationBar from '../pages/Shared/Header/NavigationBar/NavigationBar';
 const ChefLayout = () => {
     return (
         <div>
-            <NavigationBar></NavigationBar>
+            {/* <NavigationBar></NavigationBar> */}
             <Container>
                 <Row>
                     <Col lg={9}>
