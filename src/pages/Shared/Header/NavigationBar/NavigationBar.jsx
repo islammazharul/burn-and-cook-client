@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../providers/AuthProvider';
+import { FaUserCircle } from 'react-icons/fa';
 
 const NavigationBar = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -14,23 +15,25 @@ const NavigationBar = () => {
             })
     }
     return (
-        <div>
-            <Container>
-                <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+        <div className='sticky-top'>
+            <Container >
+                <Navbar className='py-2 px-4 rounded' collapseOnSelect expand="lg" bg="light" variant="light">
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav><h2>Burn&Cook</h2></Nav>
+                        <Nav>
+                            <Link className='text-decoration-none' to="/category"><h2><span className='text-danger'>Burn</span>&<span className='text-success'>Cook</span></h2></Link>
+                        </Nav>
                         <Nav className="mx-auto gap-4">
-                            <Link to='/category'>Home</Link>
-                            <Link to='/blog'>Blog</Link>
+                            <Link className='bg-info text-decoration-none px-3 py-2 rounded text-dark' to='/category'>Home</Link>
+                            <Link className='bg-info text-decoration-none px-3 py-2 rounded text-dark' to='/blog'>Blog</Link>
                         </Nav>
                         <Nav>
-                            {user && <FaUserCircle style={{ fontSize: "40px" }}></FaUserCircle>}
+                            {user && <FaUserCircle className='me-2' style={{ fontSize: "40px" }}></FaUserCircle>}
 
                             {user ?
-                                <Button onClick={handleLogOut} variant="outline-secondary">Log Out</Button> :
+                                <Button onClick={handleLogOut} className='bg-primary text-light' variant="outline-secondary">Log Out</Button> :
                                 <Link to="/login">
-                                    <Button variant="outline-secondary">Login</Button>
+                                    <Button className='bg-warning text-dark' variant="outline-secondary">Login</Button>
                                 </Link>
                             }
 

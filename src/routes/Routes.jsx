@@ -8,6 +8,7 @@ import ChefLayout from "../layout/ChefLayout";
 import Category from "../pages/Home/Category/Category";
 import PrivateRoute from "./PrivateRoute";
 import Blog from "../pages/Shared/Blog/Blog";
+import ChefRecipe from "../pages/Home/ChefRecipe/ChefRecipe";
 
 
 const router = createBrowserRouter([
@@ -47,13 +48,13 @@ const router = createBrowserRouter([
                 ]
             },
             {
-                path: 'news',
+                path: 'recipes',
                 element: <ChefLayout></ChefLayout>,
                 children: [
                     {
                         path: ':id',
-                        element: <PrivateRoute></PrivateRoute>,
-                        loader: ({ params }) => fetch(`https://localhost:5000/chef/${params.id}`)
+                        element: <ChefRecipe></ChefRecipe>,
+                        loader: ({ params }) => fetch(`http://localhost:5000/recipes/${params.id}`)
                     }
                 ]
             }
