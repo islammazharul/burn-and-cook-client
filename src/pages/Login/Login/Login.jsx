@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
     const { signIn } = useContext(AuthContext)
@@ -29,7 +30,7 @@ const Login = () => {
     }
     return (
         <Container className='w-25 mx-auto border border-info rounded p-5 bg-light mt-5'>
-            <h2>Login Your Account</h2>
+            <h3>Login Your Account</h3>
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -56,6 +57,8 @@ const Login = () => {
                 <Form.Text className="text-danger">
 
                 </Form.Text>
+                <Button className='mb-2 mt-2 w-100' variant="outline-primary"><FaGoogle />     Login with Google</Button>{' '}
+                <Button className='w-100' variant="outline-secondary"><FaGithub />    Login with Github</Button>
             </Form>
         </Container>
     );

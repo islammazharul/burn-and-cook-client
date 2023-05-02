@@ -9,15 +9,18 @@ const Home = () => {
             .then(res => res.json())
             .then(data => setChefData(data))
     }, [])
-    console.log(chefData)
+    // console.log(chefData)
     return (
-        <div>
-            {
-                chefData.map(chef => <ChefInfo
-                    key={chef.id}
-                    chef={chef}
-                ></ChefInfo>)
-            }
+        <div className='row row-cols'>
+            <h1 className='text-center'>World's Best and Premium Chef are Here</h1>
+            <div className='w-50'>
+                {
+                    chefData.map(chef => <ChefInfo
+                        key={chef.id}
+                        chef={chef}
+                    ></ChefInfo>)
+                }
+            </div>
         </div>
     );
 };

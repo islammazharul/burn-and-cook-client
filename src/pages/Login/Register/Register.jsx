@@ -6,25 +6,34 @@ import { AuthContext } from '../../../providers/AuthProvider';
 const Register = () => {
     const { createUser, profileUpdate } = useContext(AuthContext)
     const [accepted, setAccepted] = useState(false)
+    const [error, setError] = useState("");
 
     const handleRegister = event => {
         event.preventDefault();
+
         const form = event.target;
         const name = form.name.value;
         const photo = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
 
-        console.log(name, photo, email, password);
+        if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)) {
+            setError("password not valid need 8 char ");
+            return;
+        }
 
-        createUser(email, password)
-            .then(result => {
-                const createdUser = result.user;
-                console.log(createdUser)
-            })
-            .catch(error => {
-                console.log(error)
-            })
+        // console.log(name, photo, email, password);
+
+        if ((name, email, password)) {
+            createUser(email, password)
+                .then(result => {
+                    const createdUser = result.user;
+                    console.log(createdUser)
+                })
+                .catch(error => {
+                    console.log(error.message)
+                })
+        }
     }
 
     const handleAccepted = event => {
@@ -32,8 +41,9 @@ const Register = () => {
     }
 
     return (
-        <Container className='w-25 mx-auto border border-info rounded p-5 bg-light mt-5'>
-            <h2>Register Your Account</h2>
+        <Container className='w-25 mx-auto border border-info rounded p-5 bg-light mt-5 container'>
+            <h3>Register Your Account</h3>
+            <p className="text-danger">{error}</p>
             <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
