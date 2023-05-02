@@ -1,10 +1,9 @@
+import React, { useContext } from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { FaUserCircle } from 'react-icons/fa';
-import { AuthContext } from '../../../providers/AuthProvider';
-import React, { useContext } from 'react';
+import { AuthContext } from '../../../../providers/AuthProvider';
 
-const Navbar = () => {
+const NavigationBar = () => {
     const { user, logOut } = useContext(AuthContext)
 
     const handleLogOut = () => {
@@ -43,4 +42,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default NavigationBar;
