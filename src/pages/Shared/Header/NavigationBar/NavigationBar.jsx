@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { Button, Container, Image, Nav, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../providers/AuthProvider';
 import { FaUserCircle } from 'react-icons/fa';
@@ -28,10 +28,28 @@ const NavigationBar = () => {
                             <Link className='bg-info text-decoration-none px-3 py-2 rounded text-dark' to='/blog'>Blog</Link>
                         </Nav>
                         <Nav>
-                            {user && <FaUserCircle className='me-2' style={{ fontSize: "40px" }}></FaUserCircle>}
+                            {user && <OverlayTrigger
+                                placement="left"
+                                overlay={<Tooltip id="button-tooltip-2">{user.displayName}</Tooltip>}
+                            >
+                                {({ ref, ...triggerHandler }) => (
+                                    <div
+                                        variant="light"
+                                        {...triggerHandler}
+                                        className="d-inline-flex align-items-center"
+                                    >
+                                        <Image
+                                            style={{ height: '50px', width: '50px' }}
+                                            ref={ref}
+                                            roundedCircle
+                                            src="https://i.ibb.co/6HGTD9n/banner-1.png"
+                                        />
+                                    </div>
+                                )}
+                            </OverlayTrigger>}
 
                             {user ?
-                                <Button onClick={handleLogOut} className='bg-primary text-light' variant="outline-secondary">Log Out</Button> :
+                                <Button onClick={handleLogOut} className='bg-primary text-light ms-3' variant="outline-secondary">Log Out</Button> :
                                 <Link to="/login">
                                     <Button className='bg-warning text-dark' variant="outline-secondary">Login</Button>
                                 </Link>
