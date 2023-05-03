@@ -8,7 +8,7 @@ const ChefLayout = () => {
     return (
         <div>
             {/* <NavigationBar></NavigationBar> */}
-            <Container>
+            {/* <Container>
                 <Row>
                     <Col lg={9}>
                         <Outlet></Outlet>
@@ -17,8 +17,9 @@ const ChefLayout = () => {
 
                     </Col>
                 </Row>
-            </Container>
+            </Container> */}
             {/* <Footer></Footer> */}
+            <Outlet></Outlet>
         </div>
     );
 };

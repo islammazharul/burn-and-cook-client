@@ -11,9 +11,9 @@ const Home = () => {
     }, [])
     // console.log(chefData)
     return (
-        <div className='row row-cols'>
-            <h1 className='text-center'>World's Best and Premium Chef are Here</h1>
-            <div className='w-50'>
+        <div className="">
+            {/* <h1 className='text-center'>World's Best and Premium Chef are Here</h1> */}
+            <div className=' row row-cols-1 row-cols-md-2'>
                 {
                     chefData.map(chef => <ChefInfo
                         key={chef.id}

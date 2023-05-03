@@ -4,7 +4,7 @@ import { Button, Container } from 'react-bootstrap';
 const Blog = () => {
     return (
         <>
-            <Container className=' mb-5 mt-5 bg-light'>
+            <Container className=' mb-5 mt-5 bg-success bg-opacity-25'>
                 <div className=' mx-auto'>
                     <h3 className=' text-center fw-bold'>-Educational Info-</h3>
                     <div className='bg-white mt-2 p-3 rounded'>

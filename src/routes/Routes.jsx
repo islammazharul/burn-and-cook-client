@@ -5,11 +5,12 @@ import Login from "../pages/Login/Login/Login";
 import Terms from "../pages/Shared/Terms/Terms";
 import Main from "../layout/Main";
 import ChefLayout from "../layout/ChefLayout";
-import Category from "../pages/Home/Category/Category";
 import PrivateRoute from "./PrivateRoute";
 import Blog from "../pages/Shared/Blog/Blog";
 import ChefRecipe from "../pages/Home/ChefRecipe/ChefRecipe";
 import Error from "../pages/Shared/Error/Error";
+import RecipeDetails from "../pages/Home/RecipeDetails/RecipeDetails";
+import Home from "../pages/Home/Home/Home";
 
 
 const router = createBrowserRouter([
@@ -44,7 +45,7 @@ const router = createBrowserRouter([
                 children: [
                     {
                         path: ':id',
-                        element: <Category></Category>,
+                        element: <Home></Home>,
                         loader: ({ params }) => fetch(`https://burn-and-cook-server-islammazharul763-gmailcom.vercel.app/categories/${params.id}`)
                     }
                 ]
@@ -57,6 +58,10 @@ const router = createBrowserRouter([
                         path: ':id',
                         element: <ChefRecipe></ChefRecipe>,
                         loader: ({ params }) => fetch(`https://burn-and-cook-server-islammazharul763-gmailcom.vercel.app/recipes/${params.id}`)
+                    },
+                    {
+                        path: 'details',
+                        element: <RecipeDetails></RecipeDetails>
                     }
                 ]
             }

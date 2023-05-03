@@ -5,7 +5,7 @@ const Terms = () => {
     return (
         <Container>
             <h2 className='text-center text-primary mb-4'>Terms and Conditions</h2>
-            <div className='border border-info-2 p-4 rounded'>
+            <div className='border border-info-2 p-4 rounded bg-danger bg-opacity-25'>
                 <h3 className='text-center text-decoration-underline text-secondary'>Welcome to burn &amp; cook!</h3>
 
                 <p>These terms and conditions outline the rules and regulations for the use of burn &amp; cook's Website, located at https://burn-and-cook.web.app/category.

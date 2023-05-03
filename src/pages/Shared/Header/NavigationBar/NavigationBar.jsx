@@ -16,15 +16,15 @@ const NavigationBar = () => {
     return (
         <div className='sticky-top'>
             <Container >
-                <Navbar className='py-2 px-4 rounded' collapseOnSelect expand="lg" bg="light" variant="light">
+                <Navbar className='py-2 px-4 rounded  bg-opacity-25' collapseOnSelect expand="lg" bg="info" variant="light">
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav>
-                            <Link className='text-decoration-none' to="/category"><h2><span className='text-danger'>Burn</span>&<span className='text-success'>Cook</span></h2></Link>
+                            <Link className='text-decoration-none' to="/category"><h1 className='fw-bold'><span className='text-danger'>Burn</span>&<span className='text-success'>Cook</span></h1></Link>
                         </Nav>
                         <Nav className="mx-auto gap-4">
-                            <Link className='bg-info text-decoration-none px-3 py-2 rounded text-dark' to='/category'>Home</Link>
-                            <Link className='bg-info text-decoration-none px-3 py-2 rounded text-dark' to='/blog'>Blog</Link>
+                            <Link className='bg-info bg-opacity-50 text-decoration-none px-3 py-2 rounded text-dark fw-bold' to='/'>Home</Link>
+                            <Link className='bg-info bg-opacity-50 text-decoration-none px-3 py-2 rounded text-dark fw-bold' to='/blog'>Blog</Link>
                         </Nav>
                         <Nav>
                             {user && <OverlayTrigger
@@ -48,9 +48,9 @@ const NavigationBar = () => {
                             </OverlayTrigger>}
 
                             {user ?
-                                <Button onClick={handleLogOut} className='bg-primary text-light ms-3' variant="outline-secondary">Log Out</Button> :
+                                <Button onClick={handleLogOut} className='bg-primary  ms-3 fw-bold'>Log Out</Button> :
                                 <Link to="/login">
-                                    <Button className='bg-warning text-dark' variant="outline-secondary">Login</Button>
+                                    <Button className='bg-warning text-primary fw-bold'>Login</Button>
                                 </Link>
                             }
 

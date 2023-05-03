@@ -6,7 +6,7 @@ const RightNav = () => {
         <div>
             <h2>This is right nav</h2>
             <Card>
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" src="https://i.ibb.co/6HGTD9n/banner-1.png" />
                 <Card.Body>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the
@@ -15,7 +15,7 @@ const RightNav = () => {
                 </Card.Body>
             </Card>
             <Card>
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" src="https://i.ibb.co/6HGTD9n/banner-1.png" />
                 <Card.Body>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the
@@ -24,7 +24,7 @@ const RightNav = () => {
                 </Card.Body>
             </Card>
             <Card>
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" src="https://i.ibb.co/6HGTD9n/banner-1.png" />
                 <Card.Body>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the
@@ -33,7 +33,7 @@ const RightNav = () => {
                 </Card.Body>
             </Card>
             <Card>
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" src="https://i.ibb.co/6HGTD9n/banner-1.png" />
                 <Card.Body>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the

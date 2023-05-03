@@ -71,7 +71,7 @@ const Register = () => {
     }
 
     return (
-        <Container className='w-25 mx-auto border border-info rounded p-5 bg-light mt-5 container'>
+        <Container className='w-25 mx-auto border border-info rounded p-5  bg-success bg-opacity-25 mt-5 container'>
             <h3>Register Your Account</h3>
             <p className="text-danger">{error}</p>
             <p className="text-success">{success}</p>
