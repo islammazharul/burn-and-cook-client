@@ -6,7 +6,7 @@ import { getAuth, updateProfile } from 'firebase/auth';
 import app from '../../../firebase/firebase.config';
 const auth = getAuth(app)
 const Register = () => {
-    const { createUser, profileUpdate } = useContext(AuthContext)
+    const { createUser } = useContext(AuthContext)
     const [accepted, setAccepted] = useState(false)
     const [success, setSuccess] = useState('');
     const [error, setError] = useState("");
