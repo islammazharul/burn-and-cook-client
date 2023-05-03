@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Button, Container, Image, Nav, Navbar, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../providers/AuthProvider';
-import { FaUserCircle } from 'react-icons/fa';
 
 const NavigationBar = () => {
     const { user, logOut } = useContext(AuthContext)

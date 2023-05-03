@@ -9,12 +9,14 @@ import Category from "../pages/Home/Category/Category";
 import PrivateRoute from "./PrivateRoute";
 import Blog from "../pages/Shared/Blog/Blog";
 import ChefRecipe from "../pages/Home/ChefRecipe/ChefRecipe";
+import Error from "../pages/Shared/Error/Error";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <LoginLayout></LoginLayout>,
+        errorElement: <Error></Error>,
         children: [
             {
                 path: '/',

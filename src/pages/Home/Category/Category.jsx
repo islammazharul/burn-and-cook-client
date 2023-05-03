@@ -1,5 +1,6 @@
 import React from 'react';
 import ChefRecipe from '../ChefRecipe/ChefRecipe';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 const Category = () => {
     const { id } = useParams()
@@ -11,9 +12,9 @@ const Category = () => {
                 id && <h2>This Category : {categoryChef.length}</h2>
             }
             {
-                categoryChef.map(chef => <ChefRecipe
-                    key={chef.id}
-                    chef={chef}
+                categoryChef.map(cheff => <ChefRecipe
+                    key={cheff.id}
+                    chef={cheff}
                 ></ChefRecipe>
 
 

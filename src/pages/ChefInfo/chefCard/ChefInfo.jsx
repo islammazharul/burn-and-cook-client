@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 // import { Rating } from '@smastrom/react-rating'
 
 const ChefInfo = ({ chef }) => {
-    const { id, chefName, chefPicture, likes, numOfRecipes, yearsOfExperience } = chef
+    const { id, chef_id, chefName, chefPicture, likes, numOfRecipes, yearsOfExperience } = chef
     return (
         <div className=''>
             <Card className="mb-4">
@@ -16,7 +16,7 @@ const ChefInfo = ({ chef }) => {
                     <p>Number of Recipe : {numOfRecipes}</p>
                     <p><small>{yearsOfExperience} years of experience.</small></p>
                     <Card.Text>
-                        <Link to={`/recipes`}><Button variant="danger">View Details</Button></Link>
+                        <Link to={`/recipes/${chef_id}`}><Button variant="danger">View Details</Button></Link>
                         <Button variant="primary">Add to Favorite</Button>
                     </Card.Text>
                 </Card.Body>
