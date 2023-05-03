@@ -1,14 +1,23 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { Button, Container, Form } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { getAuth, sendPasswordResetEmail } from 'firebase/auth';
+import app from '../../../firebase/firebase.config';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const auth = getAuth(app);
 
 const Login = () => {
     const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext)
     const navigate = useNavigate();
     const location = useLocation();
-    console.log('login page location', location)
+    const [success, setSuccess] = useState('');
+    const [error, setError] = useState('');
+    const emailRef = useRef();
+    // console.log('login page location', location)
     const from = location.state?.from?.pathname || '/category'
 
     const handleLogin = event => {
@@ -16,16 +25,18 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password)
+        // console.log(email, password)
 
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
+                setSuccess('User login successfully');
                 navigate(from, { replace: true })
             })
             .catch(error => {
-                console.error(error)
+                console.error(error.message);
+                setError('Wrong password')
             })
     }
 
@@ -51,13 +62,31 @@ const Login = () => {
             })
     }
 
+    const handleResetPassword = event => {
+        const email = emailRef.current.value;
+        if (!email) {
+            toast('Please provide your email address to reset password')
+            return;
+        }
+        sendPasswordResetEmail(auth, email)
+            .then(() => {
+                toast('Please check your email')
+            })
+            .catch(error => {
+                console.log(error.message);
+                setError(error.message)
+            })
+    }
+
     return (
         <Container className='w-25 mx-auto border border-info rounded p-5 bg-light mt-5'>
             <h3>Login Your Account</h3>
+            <p className='text-danger'>{error}</p>
+            <p className='text-success'>{success}</p>
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" name='email' placeholder="Enter email" required />
+                    <Form.Control type="email" name='email' ref={emailRef} placeholder="Enter email" required />
 
                 </Form.Group>
 
@@ -71,6 +100,10 @@ const Login = () => {
                 <Button className='d-block w-100 mb-3' variant="primary" type="submit">
                     Login
                 </Button>
+                <Form.Text className="text-center">
+                    <small>Forget Password? Please <button onClick={handleResetPassword} className='btn btn-link'>Reset Password</button></small>
+                    <ToastContainer />
+                </Form.Text>
                 <Form.Text className="text-center">
                     Don't Have an Account? <Link to="/register" className='text-danger'>Register</Link>
                 </Form.Text>

@@ -34,9 +34,6 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, githubProvider)
     }
 
-    // const profileUpdate = (name, photo) => {
-    //     return updateProfile(auth, name, photo)
-    // }
 
     const logOut = () => {
         setLoading(true)
@@ -60,8 +57,7 @@ const AuthProvider = ({ children }) => {
         signIn,
         googleSignIn,
         githubSignIn,
-        // profileUpdate,
-        logOut,
+        logOut
     }
 
     return (
