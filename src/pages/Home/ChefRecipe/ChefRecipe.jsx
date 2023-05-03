@@ -8,7 +8,7 @@ const ChefRecipe = () => {
     // const { chef_id, rating, method, ingredients } = recipes
     // console.log("recipes", recipe, id)
     useEffect(() => {
-        fetch('http://localhost:5000/recipes')
+        fetch('https://burn-and-cook-server-islammazharul763-gmailcom.vercel.app/recipes')
             .then(res => res.json())
             .then(data => setRecipes(data))
     }, [])

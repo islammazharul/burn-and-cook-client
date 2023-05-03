@@ -43,7 +43,7 @@ const router = createBrowserRouter([
                     {
                         path: ':id',
                         element: <Category></Category>,
-                        loader: ({ params }) => fetch(`https://localhost:5000/categories/${params.id}`)
+                        loader: ({ params }) => fetch(`https://burn-and-cook-server-islammazharul763-gmailcom.vercel.app/categories/${params.id}`)
                     }
                 ]
             },
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
                     {
                         path: ':id',
                         element: <ChefRecipe></ChefRecipe>,
-                        loader: ({ params }) => fetch(`http://localhost:5000/recipes/${params.id}`)
+                        loader: ({ params }) => fetch(`https://burn-and-cook-server-islammazharul763-gmailcom.vercel.app/recipes/${params.id}`)
                     }
                 ]
             }
