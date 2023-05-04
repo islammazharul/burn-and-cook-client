@@ -4,13 +4,14 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+console.log('env variable', import.meta.env.VITE_API)
 const firebaseConfig = {
-    apiKey: "AIzaSyDnCYbbYUgPZaRojwY96KYCzkcpxblxlGI",
-    authDomain: "burn-and-cook.firebaseapp.com",
-    projectId: "burn-and-cook",
-    storageBucket: "burn-and-cook.appspot.com",
-    messagingSenderId: "509646739328",
-    appId: "1:509646739328:web:07cda261eab829076a5365"
+    apiKey: import.meta.env.VITE_APIKEY,
+    authDomain: import.meta.env.VITE_AUTHDOMAIN,
+    projectId: import.meta.env.VITE_PROJECTID,
+    storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+    messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+    appId: import.meta.env.VITE_APPID
 };
 
 // Initialize Firebase
