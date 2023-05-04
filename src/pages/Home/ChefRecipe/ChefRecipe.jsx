@@ -5,7 +5,7 @@ import RecipeDetails from '../RecipeDetails/RecipeDetails';
 const ChefRecipe = () => {
     // console.log(cheff)
     const { id } = useParams()
-    console.log('hello', id)
+    // console.log('hello', id)
     // const recipes = useLoaderData()
     const [recipes, setRecipes] = useState([])
     // const { method } = cheff;
@@ -26,12 +26,12 @@ const ChefRecipe = () => {
                 id && <h2>This Category : {recipes.length}</h2>
             } */}
 
-            {
+            {/* {
                 recipes.map(recipe => <RecipeDetails
                     key={recipe.chef_id}
                     recipe={recipe}
                 ></RecipeDetails>)
-            }
+            } */}
 
 
         </div>

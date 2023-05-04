@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// import { Rating } from 'react-rating'
+// import 'react-rating/style.css'
 
 const RecipeDetails = ({ recipe }) => {
-    console.log(recipe)
-    const { ingredients, method, rating } = recipe;
+    // console.log(recipe)
+    const [disabled, setDisabled] = useState(false);
+
+    const handleButton = () => {
+        setDisabled(true)
+        toast("Added to Favorite!");
+    }
+
+    const { ingredients, method, rating, recipe_name } = recipe;
     return (
         <Container>
             <Row className="g-4 mt-4">
@@ -11,19 +22,26 @@ const RecipeDetails = ({ recipe }) => {
                     <Card>
                         <Card.Img variant="top" src="https://i.ibb.co/6HGTD9n/banner-1.png" fluid />
                         <Card.Body>
-                            <Card.Title>Card title</Card.Title>
+                            <Card.Title>{recipe_name}</Card.Title>
                             <Card.Text>
-                                <h4>Cooking Method:</h4> {method}
+                                <p className='text-info'>Cooking Method:</p> {method}
                             </Card.Text>
                             <Card.Text>
-                                <h4>Ingredients :</h4>
+                                <p className='text-info'>Ingredients :</p>
                                 {
                                     ingredients.map(ing => <p>{ing}</p>)
                                 }
                             </Card.Text>
                             <div className='d-flex justify-content-between'>
-                                <Button className="bg-success bg-opacity-75">Add to Favorite</Button>
-                                <span>{rating}</span>
+                                <Button onClick={handleButton} className="bg-success bg-opacity-75" disabled={disabled}>Add to Favorite</Button>
+                                <ToastContainer />
+                                <span>Rating : {rating}</span>
+                                {/* <div className='flex-grow-1 d-flex align-items-center'>
+                                    <Rating
+                                        style={{ maxWidth: 150 }}
+                                        value={Math.round(rating?.number || 0)} readOnly />
+                                    <span className='ms-2'>{rating?.number}</span>
+                                </div> */}
                             </div>
                         </Card.Body>
                     </Card>

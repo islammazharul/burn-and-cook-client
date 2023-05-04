@@ -1,3 +1,7 @@
 .active {
     color: red !important;
 }
+
+.default {
+    color: green !important;
+}

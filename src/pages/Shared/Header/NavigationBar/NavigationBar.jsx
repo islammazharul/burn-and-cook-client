@@ -6,6 +6,7 @@ import './Navigation.css'
 
 const NavigationBar = () => {
     const { user, logOut } = useContext(AuthContext)
+    // const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const handleLogOut = () => {
         logOut()
@@ -21,11 +22,11 @@ const NavigationBar = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav>
-                            <Link className='text-decoration-none' to="/category"><h1 className='fw-bold'><span className='text-danger'>Burn</span>&<span className='text-success'>Cook</span></h1></Link>
+                            <NavLink className='text-decoration-none' to="/category"><h1 className='fw-bold'><span className='text-danger'>Burn</span>&<span className='text-success'>Cook</span></h1></NavLink>
                         </Nav>
                         <Nav className="mx-auto gap-4">
-                            <NavLink className='active bg-info bg-opacity-50 text-decoration-none px-3 py-2 rounded text-dark fw-bold' to='/'>Home</NavLink>
-                            <Link className='bg-info bg-opacity-50 text-decoration-none px-3 py-2 rounded text-dark fw-bold' to='/blog'>Blog</Link>
+                            <NavLink className={({ isActive }) => (isActive ? 'active' : 'default')} to='/'>Home</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? 'active' : 'default')} to='/blog'>Blog</NavLink>
                         </Nav>
                         <Nav>
                             {user && <OverlayTrigger
@@ -50,9 +51,11 @@ const NavigationBar = () => {
 
                             {user ?
                                 <Button onClick={handleLogOut} className='bg-primary  ms-3 fw-bold'>Log Out</Button> :
-                                <Link to="/login">
+                                <NavLink
+                                    className={({ isActive }) => (isActive ? 'active' : 'default')}
+                                    to="/login">
                                     <Button className='bg-warning text-primary fw-bold'>Login</Button>
-                                </Link>
+                                </NavLink>
                             }
 
                         </Nav>

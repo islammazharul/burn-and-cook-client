@@ -12,8 +12,8 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h3>Creative and innovative approach to menu development</h3>
+                        <p>We are seeking an experienced and innovative Executive Chef to oversee our culinary operations. As the Executive Chef, you will be responsible for designing and executing creative and high-quality menus that delight our guests, while also ensuring that our kitchen operates efficiently and effectively.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={500}>
@@ -23,8 +23,8 @@ const Banner = () => {
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>Creative and innovative approach to menu development</h3>
+                        <p>We are seeking an experienced and innovative Executive Chef to oversee our culinary operations. As the Executive Chef, you will be responsible for designing and executing creative and high-quality menus that delight our guests, while also ensuring that our kitchen operates efficiently and effectively.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -34,10 +34,8 @@ const Banner = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                        </p>
+                        <h3>Creative and innovative approach to menu development</h3>
+                        <p>We are seeking an experienced and innovative Executive Chef to oversee our culinary operations. As the Executive Chef, you will be responsible for designing and executing creative and high-quality menus that delight our guests, while also ensuring that our kitchen operates efficiently and effectively.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

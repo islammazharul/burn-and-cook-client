@@ -6,6 +6,7 @@ import { Outlet } from 'react-router-dom';
 import Home from '../pages/Home/Home/Home';
 import Banner from '../pages/Shared/Header/Banner/Banner';
 import RightNav from '../pages/Shared/RightNav/RightNav';
+import Feature from '../pages/Shared/Feature/Feature';
 
 const Main = () => {
     return (
@@ -24,6 +25,7 @@ const Main = () => {
                         <RightNav></RightNav>
                     </Col>
                 </Row>
+                <Feature></Feature>
             </Container>
             {/* <Footer></Footer> */}
         </div>

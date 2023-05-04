@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import RecipeDetails from '../Home/RecipeDetails/RecipeDetails';
 
 const Test = () => {
     const { id } = useParams()
     const [chefRecipe, setChefRecipe] = useState([])
     console.log(chefRecipe)
     useEffect(() => {
-        fetch(`http://localhost:5000/categories/${id}`)
+        fetch(`https://burn-and-cook-server-islammazharul763-gmailcom.vercel.app/categories/${id}`)
             .then(res => res.json())
             .then(data => setChefRecipe(data))
             .catch(error => {
@@ -17,9 +18,10 @@ const Test = () => {
         <div>
             <h2>This is test</h2>
             {
-                chefRecipe && chefRecipe.map((recipe) => <div>
-                    <h2>{recipe.chef_id}</h2>
-                </div>)
+                chefRecipe && chefRecipe.map((recipe) => <RecipeDetails
+                    key={recipe.chef_id}
+                    recipe={recipe}
+                ></RecipeDetails>)
             }
         </div>
     );

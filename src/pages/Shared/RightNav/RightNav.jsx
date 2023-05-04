@@ -4,13 +4,15 @@ import { Card } from 'react-bootstrap';
 const RightNav = () => {
     return (
         <div>
-            <h2>This is right nav</h2>
+            <h2>Our Company Partner</h2>
             <Card>
                 <Card.Img variant="top" src="https://i.ibb.co/6HGTD9n/banner-1.png" />
                 <Card.Body>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        <h3>Sevgi Çelik</h3>
+                        <p>Ceo</p>
+                        <p>Email : sevic@burn&cook.com</p>
+                        <p>Phone : </p>
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -18,8 +20,10 @@ const RightNav = () => {
                 <Card.Img variant="top" src="https://i.ibb.co/6HGTD9n/banner-1.png" />
                 <Card.Body>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        <h3>Sevgi Çelik</h3>
+                        <p>Founder</p>
+                        <p>Email : branka@burn&cook.com</p>
+                        <p>Phone : </p>
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -27,8 +31,10 @@ const RightNav = () => {
                 <Card.Img variant="top" src="https://i.ibb.co/6HGTD9n/banner-1.png" />
                 <Card.Body>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        <h3>Sevgi Çelik</h3>
+                        <p>Manager</p>
+                        <p>Email : colimore@burn&cook.com</p>
+                        <p>Phone : </p>
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -36,8 +42,10 @@ const RightNav = () => {
                 <Card.Img variant="top" src="https://i.ibb.co/6HGTD9n/banner-1.png" />
                 <Card.Body>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        <h3>Sevgi Çelik</h3>
+                        <p>Ceo</p>
+                        <p>Email : sevic@burn&cook.com</p>
+                        <p>Phone : </p>
                     </Card.Text>
                 </Card.Body>
             </Card>
