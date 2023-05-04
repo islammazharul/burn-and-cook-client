@@ -5,7 +5,7 @@ import RecipeDetails from '../RecipeDetails/RecipeDetails';
 const ChefRecipe = () => {
     // console.log(cheff)
     const { id } = useParams()
-    // console.log('hello', id)
+    console.log('hello', id)
     // const recipes = useLoaderData()
     const [recipes, setRecipes] = useState([])
     // const { method } = cheff;

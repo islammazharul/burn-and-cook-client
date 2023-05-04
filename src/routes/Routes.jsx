@@ -11,6 +11,7 @@ import ChefRecipe from "../pages/Home/ChefRecipe/ChefRecipe";
 import Error from "../pages/Shared/Error/Error";
 import RecipeDetails from "../pages/Home/RecipeDetails/RecipeDetails";
 import Home from "../pages/Home/Home/Home";
+import Test from "../pages/Test/Test";
 
 
 const router = createBrowserRouter([
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
             {
                 path: 'blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: 'test/:id',
+                element: <Test></Test>
+
             },
             {
                 path: 'category',

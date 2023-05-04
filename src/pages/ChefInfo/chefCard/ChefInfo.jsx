@@ -1,10 +1,13 @@
 import React from 'react';
 import { Button, Card, } from 'react-bootstrap';
 import { FaEye, } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 // import { Rating } from '@smastrom/react-rating'
 
 const ChefInfo = ({ chef }) => {
+    console.log(chef.id)
+    // const { id } = useParams()
+    // console.log(id)
     const { id, chef_id, chefName, chefPicture, likes, numOfRecipes, yearsOfExperience } = chef
     return (
         <div className='mb-2'>
@@ -16,7 +19,8 @@ const ChefInfo = ({ chef }) => {
                     <p>Number of Recipe : {numOfRecipes}</p>
                     <p><small>{yearsOfExperience} years of experience.</small></p>
                     <Card.Text>
-                        <Link to={`/recipes/${chef_id}`}><Button variant="danger bg-opacity-25" className='bg-danger bg-opacity-75'>View Details</Button></Link>
+                        {/* <Link to={`/recipes/${id}`}><Button variant="danger bg-opacity-25" className='bg-danger bg-opacity-75'>View Details</Button></Link> */}
+                        <Link to={`/test/${id}`}><Button variant="danger bg-opacity-25" className='bg-danger bg-opacity-75'>View Details</Button></Link>
 
                     </Card.Text>
                 </Card.Body>
