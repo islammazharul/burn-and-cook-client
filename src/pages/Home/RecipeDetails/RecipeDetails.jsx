@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import LazyLoad from 'react-lazy-load';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 // import { Rating } from 'react-rating'
@@ -20,7 +21,9 @@ const RecipeDetails = ({ recipe }) => {
             <Row className="g-4 mt-4">
                 <Col>
                     <Card>
-                        <Card.Img variant="top" src="https://i.ibb.co/6HGTD9n/banner-1.png" fluid />
+                        <LazyLoad>
+                            <Card.Img variant="top" src="https://i.ibb.co/6HGTD9n/banner-1.png" fluid />
+                        </LazyLoad>
                         <Card.Body>
                             <Card.Title>{recipe_name}</Card.Title>
                             <Card.Text>

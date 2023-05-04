@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Card, } from 'react-bootstrap';
 import { FaEye, } from 'react-icons/fa';
+import LazyLoad from 'react-lazy-load';
 import { Link, useParams } from 'react-router-dom';
 // import { Rating } from '@smastrom/react-rating'
 
@@ -13,7 +14,9 @@ const ChefInfo = ({ chef }) => {
             <Card className=" bg-success bg-opacity-25 h-100">
 
                 <Card.Body>
-                    <Card.Img className='h-50' variant="top" src={chefPicture} />
+                    <LazyLoad>
+                        <Card.Img className='h-50' variant="top" src={chefPicture} />
+                    </LazyLoad>
                     <Card.Title>{chefName}</Card.Title>
                     <p>Number of Recipe : {numOfRecipes}</p>
                     <p><small>{yearsOfExperience} years of experience.</small></p>

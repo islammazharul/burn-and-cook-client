@@ -16,7 +16,7 @@ const Test = () => {
     }, [])
     return (
         <div>
-            <h2>This is test</h2>
+            <h3 className='text-center'>Here are My Special Recipes</h3>
             {
                 chefRecipe && chefRecipe.map((recipe) => <RecipeDetails
                     key={recipe.chef_id}

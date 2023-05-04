@@ -3,7 +3,7 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 
 const Footer = () => {
     return (
-        <div className="container">
+        <div className="container bg-success bg-opacity-25 rounded px-4 mt-5">
             <div className="row">
                 <div className="col-10 col-md-4 col-lg-4 mx-auto my-5">
                     <div className=''>

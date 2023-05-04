@@ -43,7 +43,7 @@ const NavigationBar = () => {
                                             style={{ height: '50px', width: '50px' }}
                                             ref={ref}
                                             roundedCircle
-                                            src="https://i.ibb.co/6HGTD9n/banner-1.png"
+                                            src="https://i.ibb.co/jyWhj8W/P3-OLGJ1-copy-1.png"
                                         />
                                     </div>
                                 )}
