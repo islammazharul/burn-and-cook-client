@@ -5,7 +5,7 @@ import RecipeDetails from '../Home/RecipeDetails/RecipeDetails';
 const Test = () => {
     const { id } = useParams()
     const [chefRecipe, setChefRecipe] = useState([])
-    console.log(chefRecipe)
+    // console.log(chefRecipe)
     useEffect(() => {
         fetch(`https://burn-and-cook-server-islammazharul763-gmailcom.vercel.app/categories/${id}`)
             .then(res => res.json())
@@ -19,7 +19,7 @@ const Test = () => {
             <h3 className='text-center'>Here are My Special Recipes</h3>
             {
                 chefRecipe && chefRecipe.map((recipe) => <RecipeDetails
-                    key={recipe.chef_id}
+                    key={recipe.id}
                     recipe={recipe}
                 ></RecipeDetails>)
             }

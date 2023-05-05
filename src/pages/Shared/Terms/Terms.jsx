@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Terms = () => {
     return (
@@ -34,7 +35,9 @@ const Terms = () => {
                     limit any of our or your liabilities in any way that is not permitted under applicable law; or
                     exclude any of our or your liabilities that may not be excluded under applicable law.
                     The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.</p>
+                <p>Go Back to <Link to="/register">Register</Link></p>
             </div>
+
         </Container>
     );
 };

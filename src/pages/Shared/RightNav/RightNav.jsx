@@ -7,7 +7,7 @@ const RightNav = () => {
         <div className='bg-danger bg-opacity-25 p-2 rounded'>
             <h2>Our Company Partner</h2>
             <Card className='mb-3'>
-                <LazyLoad>
+                <LazyLoad threshold={1}>
                     <Card.Img variant="top" src="https://i.ibb.co/ykbBQz2/user-1.png" />
                 </LazyLoad>
                 <Card.Body>
@@ -20,7 +20,7 @@ const RightNav = () => {
                 </Card.Body>
             </Card>
             <Card className='mb-3'>
-                <LazyLoad>
+                <LazyLoad threshold={1}>
                     <Card.Img variant="top" src="https://i.ibb.co/wQBBGk1/user-2.png" />
                 </LazyLoad>
                 <Card.Body>
@@ -33,7 +33,7 @@ const RightNav = () => {
                 </Card.Body>
             </Card>
             <Card className='mb-3'>
-                <LazyLoad>
+                <LazyLoad threshold={1}>
                     <Card.Img variant="top" src="https://i.ibb.co/yy8StXr/user-3.png" />
                 </LazyLoad>
                 <Card.Body>
@@ -45,7 +45,7 @@ const RightNav = () => {
                     </Card.Text>
                 </Card.Body>
             </Card>
-            <Card className='mb-3'>
+            {/* <Card className='mb-3'>
                 <LazyLoad>
                     <Card.Img variant="top" src="https://i.ibb.co/6HGTD9n/banner-1.png" />
                 </LazyLoad>
@@ -57,7 +57,7 @@ const RightNav = () => {
                         <p>Phone : +90 505-5517-6176</p>
                     </Card.Text>
                 </Card.Body>
-            </Card>
+            </Card> */}
         </div>
     );
 };

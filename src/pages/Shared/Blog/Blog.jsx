@@ -1,11 +1,22 @@
 import React from 'react';
 import { Button, Container } from 'react-bootstrap';
+import Pdf from "react-to-pdf";
+const ref = React.createRef();
 
 const Blog = () => {
+
+    const ref = React.createRef();
+    const options = {
+        orientation: 'landscape',
+        unit: 'px',
+        format: [window.innerWidth * 0.55, window.innerHeight]
+    };
+
     return (
         <>
-            <Container className=' mb-5 mt-5 bg-success bg-opacity-25'>
-                <div className=' mx-auto'>
+
+            <Container ref={ref} className='mb-2 mt-5 bg-success bg-opacity-25'>
+                <div className=' mx-auto p-3'>
                     <h3 className=' text-center fw-bold'>-Educational Info-</h3>
                     <div className='bg-white mt-2 p-3 rounded'>
                         <h4 className='text-2xl text-purple-700 fw-bold'>1. Tell us the differences between uncontrolled and controlled components?</h4>
@@ -23,7 +34,14 @@ const Blog = () => {
                         <h4 className='text-2xl text-purple-700 fw-bold'>4. What is a custom hook, and why will you create a custom hook?</h4>
                         <p className='fw-bold'>Ans : Custom React JS hooks offer reusability as when a custom hook is created, it can be reused easily, which makes the code cleaner and reduces the time to write the code. It also enhances the rendering speed of the code as a custom hook does not need to be rendered again and again while rendering the whole code.</p>
                     </div>
-                    <div className='text-center mt-4'><Button className='py-2 px-5' variant="info">Download Pdf</Button></div>
+
+                </div>
+            </Container>
+            <Container>
+                <div className="App w-25 mx-auto">
+                    <Pdf targetRef={ref} options={options} filename="code-example.pdf">
+                        {({ toPdf }) => <button className="bg-info border-0 fw-bold px-3 py-2 rounded" onClick={toPdf}>Download Pdf</button>}
+                    </Pdf>
                 </div>
             </Container>
         </>

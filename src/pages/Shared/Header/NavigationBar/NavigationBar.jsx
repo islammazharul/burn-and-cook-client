@@ -22,10 +22,10 @@ const NavigationBar = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav>
-                            <NavLink className='text-decoration-none' to="/category"><h1 className='fw-bold'><span className='text-danger'>Burn</span>&<span className='text-success'>Cook</span></h1></NavLink>
+                            <Link className='text-decoration-none' to="/category"><h1 className='fw-bold'><span className='text-danger'>Burn</span>&<span className='text-success'>Cook</span></h1></Link>
                         </Nav>
                         <Nav className="mx-auto gap-4">
-                            <NavLink className={({ isActive }) => (isActive ? 'active' : 'default')} to='/'>Home</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? 'active' : 'default')} to='/category'>Home</NavLink>
                             <NavLink className={({ isActive }) => (isActive ? 'active' : 'default')} to='/blog'>Blog</NavLink>
                         </Nav>
                         <Nav>
@@ -43,7 +43,7 @@ const NavigationBar = () => {
                                             style={{ height: '50px', width: '50px' }}
                                             ref={ref}
                                             roundedCircle
-                                            src="https://i.ibb.co/jyWhj8W/P3-OLGJ1-copy-1.png"
+                                            src={user.photoURL}
                                         />
                                     </div>
                                 )}

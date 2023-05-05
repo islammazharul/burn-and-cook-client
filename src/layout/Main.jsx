@@ -1,33 +1,29 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import Footer from '../pages/Shared/Footer/Footer';
-import NavigationBar from '../pages/Shared/Header/NavigationBar/NavigationBar';
 import { Outlet } from 'react-router-dom';
 import Home from '../pages/Home/Home/Home';
 import Banner from '../pages/Shared/Header/Banner/Banner';
 import RightNav from '../pages/Shared/RightNav/RightNav';
 import Feature from '../pages/Shared/Feature/Feature';
+import Order from '../pages/Shared/Order/Order';
 
 const Main = () => {
     return (
         <div>
-            {/* <NavigationBar></NavigationBar> */}
+
             <Banner></Banner>
             <Container className=''>
-                <Row>
-
+                <Row className='h-50'>
                     <Col lg={9}>
-                        {/* <h2>Hello</h2> */}
-                        <Home></Home>
                         <Outlet></Outlet>
                     </Col>
                     <Col lg={3}>
                         <RightNav></RightNav>
                     </Col>
                 </Row>
+                <Order></Order>
                 <Feature></Feature>
             </Container>
-            {/* <Footer></Footer> */}
         </div>
     );
 };

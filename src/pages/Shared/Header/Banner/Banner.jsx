@@ -1,9 +1,9 @@
 import React from 'react';
-import { Carousel, Container, Image } from 'react-bootstrap';
+import { Carousel, Container } from 'react-bootstrap';
 
 const Banner = () => {
     return (
-        <Container>
+        <Container className='mb-5'>
             <Carousel>
                 <Carousel.Item interval={1000}>
                     <img
@@ -19,7 +19,7 @@ const Banner = () => {
                 <Carousel.Item interval={500}>
                     <img
                         className="d-block w-100"
-                        src="https://i.ibb.co/6HGTD9n/banner-1.png"
+                        src="https://i.ibb.co/c317tC9/food-2-3-1440x650.jpg"
                         alt="Second slide"
                     />
                     <Carousel.Caption>
@@ -30,7 +30,7 @@ const Banner = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://i.ibb.co/6HGTD9n/banner-1.png"
+                        src="https://i.ibb.co/zsHcddZ/food-1-1440x650.jpg"
                         alt="Third slide"
                     />
                     <Carousel.Caption>

@@ -8,6 +8,7 @@ import app from '../../../firebase/firebase.config';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+
 const auth = getAuth(app);
 
 const Login = () => {
@@ -45,6 +46,7 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error.message)
@@ -56,6 +58,8 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
+                setSuccess('User login successfully');
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error.message)
@@ -79,7 +83,7 @@ const Login = () => {
     }
 
     return (
-        <Container className='w-25 mx-auto border border-info rounded p-5  bg-success bg-opacity-25 mt-5'>
+        <Container className='w-25 mx-auto border border-info rounded p-5 p-0-sm bg-success bg-opacity-25 mt-5'>
             <h3>Login Your Account</h3>
             <p className='text-danger'>{error}</p>
             <p className='text-success'>{success}</p>
