@@ -83,7 +83,7 @@ const Login = () => {
     }
 
     return (
-        <Container className='w-25 mx-auto border border-info rounded p-5 p-0-sm bg-success bg-opacity-25 mt-5'>
+        <Container className='mx-auto border border-info rounded p-5 p-0-sm bg-success bg-opacity-25 mt-5'>
             <h3>Login Your Account</h3>
             <p className='text-danger'>{error}</p>
             <p className='text-success'>{success}</p>

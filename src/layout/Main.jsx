@@ -13,7 +13,7 @@ const Main = () => {
 
             <Banner></Banner>
             <Container className=''>
-                <Row className='h-50'>
+                <Row className='h-auto'>
                     <Col lg={9}>
                         <Outlet></Outlet>
                     </Col>
