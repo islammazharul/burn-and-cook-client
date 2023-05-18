@@ -43,8 +43,9 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><Test></Test></PrivateRoute>
             },
             {
-                path: '/',
+                path: '/category',
                 element: <Main></Main>,
+                // errorElement: <Error></Error>,
                 children: [
                     {
                         path: ':id',
